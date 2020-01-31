@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   wordpress:
     depends_on:
@@ -8,6 +8,7 @@ services:
       - ./www:/var/www/html
     environment:
       WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: dev 
       WORDPRESS_DB_PASSWORD: p4ssw0rd!
     ports:
       - 80:80 # Expose http and https
